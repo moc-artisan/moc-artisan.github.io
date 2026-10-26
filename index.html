@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thương Hiệu Cá Nhân & Sản Phẩm Thủ Công</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 dark:bg-stone-900 dark:text-stone-100 transition-colors duration-300 font-sans">
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-stone-50/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-bold tracking-wider text-amber-800 dark:text-amber-500">
+                    <i class="fa-solid fa-[#000] fa-gem mr-2"></i>CỬA HÀNG THỦ CÔNG
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Giới Thiệu</a>
+                    <a href="#products" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Sản Phẩm</a>
+                    <a href="#contact" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Đặt Chế Tác Riêng</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:text-amber-600 focus:outline-none transition">
+                        <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon"></i>
+                        <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600 dark:text-stone-300 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-100 dark:bg-stone-800 px-4 pt-2 pb-4 space-y-2 border-b border-stone-200 dark:border-stone-700">
+            <a href="#about" class="block py-2 text-stone-700 dark:text-stone-200 hover:text-amber-600">Giới Thiệu</a>
+            <a href="#products" class="block py-2 text-stone-700 dark:text-stone-200 hover:text-amber-600">Sản Phẩm</a>
+            <a href="#contact" class="block py-2 text-stone-700 dark:text-stone-200 hover:text-amber-600">Đặt Chế Tác Riêng</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
+        <span class="text-xs font-semibold tracking-widest uppercase text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-950 px-3 py-1 rounded-full">Tác Phẩm Tinh Xảo</span>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-stone-100">
+            Trang Sức & Sản Phẩm Gỗ Thủ Công
+        </h1>
+        <p class="mt-4 text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+            Mỗi tác phẩm đều được chế tác thủ công tỉ mỉ, mang vẻ đẹp tự nhiên, độc bản và ấm áp từ vân gỗ.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+            <a href="#products" class="px-6 py-3 bg-amber-700 hover:bg-amber-800 text-white font-medium rounded-lg shadow-md transition">
+                Khám Phá Bộ Sưu Tập
+            </a>
+            <a href="https://zalo.me/0365473663
+            " target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Chat Zalo Tư Vấn
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-stone-100 dark:bg-stone-800/50 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800" alt="Chế tác thủ công" class="rounded-xl shadow-lg object-cover w-full h-80 sm:h-96">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-stone-900 dark:text-stone-100">Nghệ Thuật Chế Tác Độc Bản</h2>
+                    <p class="mt-4 text-stone-600 dark:text-stone-300 leading-relaxed">
+                        Tôi dành sự tỉ mỉ cho từng đường nét chạm khắc trên các khối gỗ tự nhiên quý hiếm. Mọi sản phẩm như nhẫn gỗ, vòng cổ hay phụ kiện decor đều mang một câu chuyện riêng và không có hai sản phẩm nào giống hệt nhau.
+                    </p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center text-stone-700 dark:text-stone-300">
+                            <i class="fa-solid fa-check text-amber-600 mr-3"></i> 100% Gỗ Tự Nhiên & An Toàn
+                        </li>
+                        <li class="flex items-center text-stone-700 dark:text-stone-300">
+                            <i class="fa-solid fa-check text-amber-600 mr-3"></i> Tỉ Mỉ Chạm Khắc Bằng Tay
+                        </li>
+                        <li class="flex items-center text-stone-700 dark:text-stone-300">
+                            <i class="fa-solid fa-check text-amber-600 mr-3"></i> Thiết Kế Theo Yêu Cầu Cá Nhân
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-stone-900 dark:text-stone-100">Danh Mục Sản Phẩm</h2>
+            <p class="mt-2 text-stone-600 dark:text-stone-400">Chọn sản phẩm ưa thích và liên hệ đặt mua ngay</p>
+            
+            <!-- Category Filter -->
+            <div class="flex justify-center flex-wrap gap-2 mt-6" id="filter-buttons">
+                <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-amber-700 text-white transition" data-filter="all">Tất Cả</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-600 hover:text-white transition" data-filter="ring">Nhẫn Gỗ</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-600 hover:text-white transition" data-filter="necklace">Vòng Cổ</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-600 hover:text-white transition" data-filter="decor">Decor / Phụ Kiện</button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card ring bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/nanhbangsungtrauvanhangomun1.jpg" alt="Vòng cổ gỗ và nhẫn gỗ mun" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Nhẫn Gỗ</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Nhẫn Gỗ Mun</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Nhẫn gỗ mun cao cấp.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">200.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card necklace bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+    <img src="images/matdaychuyenvanhangohuong.jpg" alt="Mặt dây chuyền gỗ hương" class="w-full h-56 object-contain">
+    <div class="p-6">
+        <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Vòng Cổ</span>
+        <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Mặt Dây Chuyền Vân Hạn Gỗ Hương</h3>
+        <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Vân gỗ tự nhiên độc bản, tinh xảo và thơm nhẹ nhàng.</p>
+        <div class="mt-4 flex items-center justify-between">
+            <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">150.000 VNĐ</span>
+            <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Sản phẩm Đạt Ma Sư Tổ cận cảnh -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/datmacancanh.jpg" alt="Tượng Đạt Ma Sư Tổ gỗ thủ công" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Đạt Ma Sư Tổ Thủ Công</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng Đạt Ma Sư Tổ chạm khắc thủ công tỉ mỉ trên phôi gỗ tự nhiên, thần thái trầm mặc uy nghiêm, đường vân độc bản mang ý nghĩa trấn trạch và mang lại vượng khí cho không gian.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">1.500.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm Phật Di Lặc -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/phatdilac.jpg" alt="Tượng Phật Di Lặc gỗ thủ công" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Phật Di Lặc Gỗ Tự Nhiên</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng Phật Di Lặc đứng hoan hỉ tạc từ gỗ tự nhiên nguyên khối, sắc gỗ ấm áp, đường nét chạm trổ thủ công tinh xảo, mang ý nghĩa biểu tượng của sự may mắn, bình an và tài lộc viên mãn.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">1.850.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm Tượng Ông Thọ -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/tuongongtho.jpg" alt="Tượng ông Thọ gỗ thủ công" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Ông Thọ Gỗ Lũa Tự Nhiên</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng ông Thọ (Thọ Tinh) tay cầm đào tiên, chạm khắc thủ công tinh xảo trên phôi lũa gỗ tự nhiên với những đường bướu độc bản, mang ý nghĩa cầu chúc sức khỏe, bình an và trường thọ viên mãn cho gia đình.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">1.650.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm Bộ Tranh Phúc Lộc Thọ -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/phucloctho.jpg" alt="Bộ tranh Phúc Lộc Thọ gỗ thủ công" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Tranh Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Bộ Tranh Chữ Phúc - Lộc - Thọ Gỗ Thủ Công</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Bộ tranh chữ thư pháp Phúc - Lộc - Thọ chạm khắc gỗ thủ công tinh xảo, hoa văn sắc nét kết hợp dát vàng nổi bật, mang ý nghĩa cầu chúc tài lộc, bình an, may mắn và viên mãn cho gia đình.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">1.950.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Product 3 -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/trangsucvanhango.jpg" alt="Vòng cổ gỗ" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Trang sức</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">matdayhinhsoivanhango</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Mặt dây chuyền gỗ hương cao cấp.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">280.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Sản phẩm mới tiếp theo -->
+            <div class="product-card ring bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/nanhbangsungtrauvanhangomun2.jpg" alt="Nanh bằng sừng trâu và nhẫn gỗ " class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Trang Sức & Nhẫn Gỗ</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">nanhbangsungtrauvanhangomun2</h3>
+                <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Chất liệu sừng trâu tự nhiên bóng mượt, đường vân độc bản kết hợp thiết kế tinh xảo, mang lại vẻ đẹp mộc mạc mà sang trọng.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">100.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm mới tiếp theo -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+    <img src="images/tuongthimthu.jpg" alt="Tượng cóc ngậm tiền gỗ thủ công" class="w-full h-56 object-contain">
+    <div class="p-6">
+        <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+        <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Cóc Ngậm Tiền (Thiềm Thừ) Gỗ Thủ Công</h3>
+        <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng cóc ngậm tiền (Thiềm Thừ) chế tác thủ công từ gỗ tự nhiên, đục đẽo tỉ mỉ sắc nét, mang ý nghĩa chiêu tài hút lộc, bình an và may mắn cho gia chủ.</p>
+        <div class="mt-4 flex items-center justify-between">
+            <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">2.000.000 VNĐ</span>
+            <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Sản phẩm Đạt Ma Sư Tổ gỗ liêm -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/datmasu-goliem.jpg" alt="Tượng Đạt Ma Sư Tổ gỗ liêm xưa" class="w-full h-auto object-containr">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Đạt Ma Sư Tổ Gỗ Liêm Xưa</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng Đạt Ma Sư Tổ tạc trên phôi gỗ liêm xưa tự nhiên, đường nét đục đẽo thủ công sắc sảo, tôn lên vẻ đẹp mộc mạc, trầm mặc và ý nghĩa phong thủy trấn trạch sâu sắc.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">2.250.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+           <!-- Sản phẩm Hưng Đạo Đại Vương Trần Quốc Tuấn -->
+            <div class="product-card decor bg-white dark:bg-stone-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border border-stone-100 dark:border-stone-700">
+                <img src="images/tranquoctuan.jpg" alt="Tượng Hưng Đạo Đại Vương Trần Quốc Tuấn" class="w-full h-56 object-contain">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase">Đồ Gỗ Phong Thủy</span>
+                    <h3 class="text-xl font-bold mt-1 text-stone-900 dark:text-stone-100">Tượng Hưng Đạo Đại Vương Trần Quốc Tuấn</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mt-2">Tượng Hưng Đạo Đại Vương Trần Quốc Tuấn chế tác thủ công tinh xảo từ gỗ tự nhiên, thần thái uy nghiêm, sắc nét, mang ý nghĩa phong thủy trấn trạch, tôn vinh truyền thống hào hùng và đem lại bình an, vượng khí cho gia chủ.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-amber-700 dark:text-amber-500">3.500.000 VNĐ</span>
+                        <a href="https://zalo.me/0365473663" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-cart-shopping"></i> Mua Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+             
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-stone-100 dark:bg-stone-800/50 transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-stone-900 dark:text-stone-100">Đặt Hàng & Liên Hệ</h2>
+                <p class="mt-2 text-stone-600 dark:text-stone-400">Gửi thông tin để đặt chế tác theo yêu cầu hoặc nhận tư vấn chi tiết</p>
+            </div>
+
+            <form id="order-form" class="space-y-6 bg-white dark:bg-stone-800 p-8 rounded-xl shadow-md border border-stone-200 dark:border-stone-700">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">Họ và Tên</label>
+                        <input type="text" required class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-transparent text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">Số Điện Thoại / Zalo</label>
+                        <input type="tel" required class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-transparent text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-600">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">Sản Phẩm Quan Tâm / Yêu Cầu Riêng</label>
+                    <textarea rows="4" required class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-transparent text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="Ví dụ: Tôi muốn đặt nhẫn gỗ mun size 17mm..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-amber-700 hover:bg-amber-800 text-white font-medium rounded-lg shadow-md transition">
+                    Gửi Yêu Cầu Đặt Hàng
+                </button>
+            </form>
+            <div id="form-alert" class="hidden mt-4 p-4 text-center text-sm rounded-lg bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">
+                Cảm ơn bạn! Yêu cầu đã được gửi thành công. Tôi sẽ liên hệ lại sớm nhất.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-stone-900 text-stone-400 text-center text-sm border-t border-stone-800">
+        <p>© 2026 Cửa Hàng Thủ Công Cá Nhân. Tất cả quyền được bảo lưu.</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="#" class="hover:text-amber-500 text-lg"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-amber-500 text-lg"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="hover:text-amber-500 text-lg"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-amber-500 text-lg"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Dark/Light Mode Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Product Filter Logic ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-amber-700', 'text-white');
+                    b.classList.add('bg-stone-200', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
+                });
+                btn.classList.add('bg-amber-700', 'text-white');
+                btn.classList.remove('bg-stone-200', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- Form Submit Alert ---
+        const orderForm = document.getElementById('order-form');
+        const formAlert = document.getElementById('form-alert');
+
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formAlert.classList.remove('hidden');
+            orderForm.reset();
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+<!-- Kết nối mạng xã hội Mộc Artisan -->
+<div style="text-align: center; padding: 20px; background-color: #f5f5f5; margin-top: 30px; border-top: 1px solid #ddd;">
+    <h3 style="margin-bottom: 15px; color: #4a3525;">Kết nối với Mộc Artisan</h3>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 24px;">
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@HandcraftedWoodArt-q5h" target="_blank" style="color: #ff0000; text-decoration: none;" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/thuc.dinhvan.52" target="_blank" style="color: #187ff2; text-decoration: none;" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+       <!-- Zalo (Sử dụng icon chat chung hoặc ảnh tùy chỉnh vì Zalo không có sẵn trong Font Awesome bản cũ) -->
+        <a href="https://zalo.me/0365473663" target="_blank" style="color: #0068ff; text-decoration: none; font-weight: bold; font-size: 16px; line-height: 24px;" title="Zalo">
+            Zalo
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/yrumhd?psln=bTFlamZ5eWdWg5&utm_source=qr" target="_blank" style="color: #e4405f; text-decoration: none;" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@thucff193?lang=vi-VN" target="_blank" style="color: #000000; text-decoration: none;" title="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+    </div>
+</div>
+</div>
+</body>
+</html>
